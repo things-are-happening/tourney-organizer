@@ -1,0 +1,5 @@
+"use strict";
+
+require("babel-core/register");
+require("./server");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0EiLCJmaWxlIjoic2VydmVyL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZShgYmFiZWwtY29yZS9yZWdpc3RlcmApXG5yZXF1aXJlKGAuL3NlcnZlcmApXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
