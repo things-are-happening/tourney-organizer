@@ -1,0 +1,10 @@
+"use strict";
+
+var angular = require("angular");
+require("angular-ui-router");
+require("angular-sanitize"); // sanitizes HTML strings
+
+angular.module("boilerPlate", ["ui.router", "ngSanitize"]).config(require("./states"));
+
+require("./controllers/controllers");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNsaWVudC9qcy9hcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJLFVBQVUsa0JBQVY7QUFDSjtBQUNBOztBQUVBLFFBQVEsTUFBUixnQkFBOEIsMkJBQTlCLEVBQ0csTUFESCxDQUNVLG1CQURWOztBQUlBIiwiZmlsZSI6ImNsaWVudC9qcy9hcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYW5ndWxhciA9IHJlcXVpcmUoYGFuZ3VsYXJgKVxucmVxdWlyZShgYW5ndWxhci11aS1yb3V0ZXJgKVxucmVxdWlyZShgYW5ndWxhci1zYW5pdGl6ZWApIC8vIHNhbml0aXplcyBIVE1MIHN0cmluZ3NcblxuYW5ndWxhci5tb2R1bGUoYGJvaWxlclBsYXRlYCwgW2B1aS5yb3V0ZXJgLCBgbmdTYW5pdGl6ZWBdKVxuICAuY29uZmlnKHJlcXVpcmUoYC4vc3RhdGVzYCkpXG5cblxucmVxdWlyZShgLi9jb250cm9sbGVycy9jb250cm9sbGVyc2ApXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
