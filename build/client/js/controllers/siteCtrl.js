@@ -1,7 +1,0 @@
-"use strict";
-
-module.exports = ["$scope", function ($scope) {
-
-  $scope.test = true;
-}];
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNsaWVudC9qcy9jb250cm9sbGVycy9zaXRlQ3RybC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLE9BQU8sT0FBUCxHQUFpQixXQUFXLFVBQUMsTUFBRCxFQUFZOztBQUV0QyxTQUFPLElBQVAsR0FBYyxJQUFkLENBRnNDO0NBQVosQ0FBNUIiLCJmaWxlIjoiY2xpZW50L2pzL2NvbnRyb2xsZXJzL3NpdGVDdHJsLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBbYCRzY29wZWAsICgkc2NvcGUpID0+IHtcblxuICAkc2NvcGUudGVzdCA9IHRydWVcbn1dXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
