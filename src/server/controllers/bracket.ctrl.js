@@ -4,7 +4,6 @@ import {generateKey} from './../helpers/utils'
 
 export function createBracket (req, res) {
   req.body.bracketId = generateKey( Bracket, `bracketId` )
-  console.log(req.body);
   crudCreate( Bracket, req.body )
     .then( bracket => {
       return res.status(200).send(bracket)
