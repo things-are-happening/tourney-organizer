@@ -15,18 +15,18 @@ const BracketSchema = new Schema({
     required: true,
     unique: true
   },
+  // teamsInfo could be a reference to `Team` Schema
   teamsInfo: [
     {
       name: {
         type:String,
         required: true
       },
-      players: Array,
-      wonRoundsIds: Array
+      players: Array
     }
   ],
   results: Array,
-  teams: Array // presave create this from teamsInfo.name
+  teams: Array
   // NOTE: `tournament` feature still WIP
   // tournament: {
   //   type: Schema.Types.ObjectId,
@@ -36,8 +36,5 @@ const BracketSchema = new Schema({
 
 BracketSchema.plugin(uniqueValidator)
 BracketSchema.plugin(deepPopulate)
-BracketSchema.pre(`save`, (next) => {
 
-  return next()
-})
 export default mongoose.model(`Bracket`, BracketSchema)

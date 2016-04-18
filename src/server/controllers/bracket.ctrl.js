@@ -15,12 +15,10 @@ export function createBracket (req, res) {
 }
 
 export function getBracket(req, res) {
-  console.log(`REQ  PARAMS >>>> `, req.params);
   let query = {
     // change this to key id
     bracketId: req.params.bracketId
   }
-  console.log(`QUERY >>> ${query.bracketId}`);
   crudReadOne( Bracket, query )
     .then( bracket => {
       return res.status(200).send(bracket)

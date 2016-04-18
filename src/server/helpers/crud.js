@@ -1,11 +1,23 @@
 import q from 'q'
 
+const populateModel = ( Model, query,  popString ) => {
+  popString = popString.replace(/,/g, ' ')
+  return Model.findOne(query)
+  .populate(popString)
+  .exec((err, result) => {
+    if(err){
+      throw new Error(`Error populating model ${err}`)
+    }
+    return result
+  })
+}
+
 /*******************************************************************************
 Create
 *******************************************************************************/
-export function crudCreate ( model, body ){
+export function crudCreate ( Model, body ){
   let dfd = q.defer()
-  new model(body).save()
+  new Model(body).save()
     .then(result => {
       return dfd.resolve(result)
     })
@@ -18,12 +30,17 @@ export function crudCreate ( model, body ){
 /*******************************************************************************
 Read
 *******************************************************************************/
-export function crudReadOne( model, query ){
+export function crudReadOne( Model, query, populate = {} ){
   let dfd = q.defer()
-  model.findOne( query )
+  Model.findOne( query )
     .then( result => {
       if(!result){
         return dfd.reject(`No Result`)
+      }
+      if(Object.keys(populate).length === 2){
+        let query =  {}
+        query[populate.idName] = result[populate.idName]
+        return dfd.resolve(populateModel( Model, query, populate.str ))
       }
       return dfd.resolve(result)
     })
@@ -33,12 +50,17 @@ export function crudReadOne( model, query ){
   return dfd.promise
 }
 
-export function crudReadAll( model, query = {} ){
+export function crudReadAll( Model, query = {}, populate = {} ){
   let dfd = q.defer()
-  model.find({})
+  Model.find(query)
     .then( result => {
       if(!result || result.length === 0){
         return dfd.reject(`No result`)
+      }
+      if(Object.keys(populate).length > 0){
+        let query =  {}
+        query[populate.idName] = result[populate.idName]
+        return dfd.resolve(populateModel( Model, query, populate.str ))
       }
       return dfd.resolve(result)
     })
@@ -51,11 +73,16 @@ export function crudReadAll( model, query = {} ){
 /*******************************************************************************
 Update
 *******************************************************************************/
-export function crudUpdate( model, query, body ){
+export function crudUpdate( Model, query, body, populate = {} ){
   let dfd = q.defer()
-  model.findOneAndUpdate(query, body, {}, (err, result) => {
+  Model.findOneAndUpdate(query, body, {}, (err, result) => {
     if(err)
       return dfd.reject(err)
+    if(Object.keys(populate).length > 0){
+      let query =  {}
+      query[populate.idName] = result[populate.idName]
+      return dfd.resolve(populateModel( Model, query, populate.str ))
+    }
     return dfd.resolve(result)
   })
   return dfd.promise
@@ -64,9 +91,9 @@ export function crudUpdate( model, query, body ){
 /*******************************************************************************
 Delete
 *******************************************************************************/
-export function crudDelete( model, query = {}){
+export function crudDelete( Model, query = {}){
   let dfd = q.defer()
-  model.find(query).remove()
+  Model.find(query).remove()
     .then( result => {
       return dfd.resolve(`Delete Successful`)
     })
