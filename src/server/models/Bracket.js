@@ -10,38 +10,34 @@ const BracketSchema = new Schema({
     type: String,
     required: true
   },
-  teams: [
+  bracketId: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  teamsInfo: [
     {
       name: {
         type:String,
         required: true
       },
       players: Array,
-      wonRounds: Array
-      // what will be the best way to do this?
-      // array of won round Ids?
+      wonRoundsIds: Array
     }
   ],
-  bracket: [
-    {
-      round: {
-        roundId: Number,
-        matches: Array // [[teamId, teamId], [teamId, teamId], [teamId, teamId]]
-      }
-    }
-  ],
+  results: Array,
+  teams: Array // presave create this from teamsInfo.name
   // NOTE: `tournament` feature still WIP
   // tournament: {
   //   type: Schema.Types.ObjectId,
   //   ref: `Tournament`
   // }
-},
-{
-  timestamp: true,
-  versionKey: false
-})
+},{timestamp: true, versionKey: false})
 
 BracketSchema.plugin(uniqueValidator)
 BracketSchema.plugin(deepPopulate)
+BracketSchema.pre(`save`, (next) => {
 
+  return next()
+})
 export default mongoose.model(`Bracket`, BracketSchema)
