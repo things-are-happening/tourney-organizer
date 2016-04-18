@@ -18,11 +18,8 @@ const BracketSchema = new Schema({
   // teamsInfo could be a reference to `Team` Schema
   teamsInfo: [
     {
-      name: {
-        type:String,
-        required: true
-      },
-      players: Array
+      type: Schema.Types.ObjectId,
+      ref: `Team`
     }
   ],
   results: Array,
