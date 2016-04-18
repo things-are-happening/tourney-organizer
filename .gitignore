@@ -1,5 +1,9 @@
 node_modules/
+build/
 **/*/secrets.*
 npm-*.**
+<<<<<<< HEAD
 build
 asd.js
+=======
+>>>>>>> b30f5f92f13581d61dd4ddfc0a92507a8e3ea928
