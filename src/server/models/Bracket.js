@@ -15,7 +15,6 @@ const BracketSchema = new Schema({
     required: true,
     unique: true
   },
-  // teamsInfo could be a reference to `Team` Schema
   teamsInfo: [
     {
       type: Schema.Types.ObjectId,
