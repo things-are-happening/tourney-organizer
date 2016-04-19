@@ -1,10 +1,12 @@
 import q from 'q'
 
 const populateModel = ( Model, query,  popString ) => {
-  popString = popString.replace(/,/g, ' ')
+  if(popString.indexOf(',') >= 0)
+    popString = popString.replace(/,/g, ' ')
   return Model.findOne(query)
   .populate(popString)
   .exec((err, result) => {
+    console.log(`POP MODEL RESULT`, result);
     if(err){
       throw new Error(`Error populating model ${err}`)
     }
@@ -40,6 +42,7 @@ export function crudReadOne( Model, query, populate = {} ){
       if(Object.keys(populate).length === 2){
         let query =  {}
         query[populate.idName] = result[populate.idName]
+        console.log(`POP QUERY >>>`, query);
         return dfd.resolve(populateModel( Model, query, populate.str ))
       }
       return dfd.resolve(result)

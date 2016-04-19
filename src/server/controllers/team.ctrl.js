@@ -10,7 +10,7 @@ export function createTeam(req, res) {
 		})
 		.catch(err => {
 			return res.status(400).send(err)
-		})	
+		})
 }
 
 export function getTeam(req, res) {
@@ -24,5 +24,4 @@ export function getTeam(req, res) {
 		.catch(err => {
 			return res.status(400).send(err)
 		})
-		
 }

@@ -1,3 +1,4 @@
+import _               from 'lodash'
 import mongoose        from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
@@ -15,14 +16,16 @@ const BracketSchema = new Schema({
     required: true,
     unique: true
   },
-  teamsInfo: [
+  teams: [
     {
       type: Schema.Types.ObjectId,
-      ref: `Team`
+      ref: `Team`,
+      required: true
     }
   ],
+  // teams: Array,
   results: Array,
-  teams: Array
+  matches: Array
   // NOTE: `tournament` feature still WIP
   // tournament: {
   //   type: Schema.Types.ObjectId,
