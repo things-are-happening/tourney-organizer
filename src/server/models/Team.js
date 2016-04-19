@@ -6,7 +6,7 @@ let deepPopulate = require(`mongoose-deep-populate`)(mongoose)// this has to be 
 let Schema = mongoose.Schema
 
 const TeamSchema = new Schema({
-	name: { 
+	name: {
 		type: String,
 	 	required: true
 	},
@@ -30,5 +30,3 @@ TeamSchema.plugin(uniqueValidator)
 TeamSchema.plugin(deepPopulate)
 
 export default mongoose.model(`Team`, TeamSchema);
-
-
