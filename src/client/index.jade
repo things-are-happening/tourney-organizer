@@ -4,17 +4,20 @@ html(lang='en', ng-app='boilerPlate')
     title App Name
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
     link(rel='stylesheet', href='style.css')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
 
   header
-    div(class="headerNav")
-      div(class="headerNavLeft")
-        a(href="#") Test
-      div(class="headerNavRight")
-        a(href="#") Test
+    nav(class="navbar navbar-static")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          #[a(href="#" class="navbar-brand") Brand]
+        ul(class="nav navbar-nav navbar-right")
+          li
+            #[a(href="#" ) Test]
 
   body
     
-    article(ui-view class='container-fluid')
+    article(ui-view class='container')
     
     script(src='bundle.js')
     script(src='https://code.jquery.com/jquery-1.12.3.js')
