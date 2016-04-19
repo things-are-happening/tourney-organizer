@@ -1,2 +1,5 @@
 angular.module(`boilerPlate`)
   .controller(`siteCtrl`, require(`./siteCtrl`))
+  .controller(`tournamentCtrl`, require(`./tournamentCtrl`))
+  .controller(`newTournamentFormCtrl`, require(`./newTournamentFormCtrl`))
+  .controller(`userDashboardCtrl`, require(`./userDashboardCtrl`))

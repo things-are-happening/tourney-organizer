@@ -19,4 +19,19 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
       controller: `siteCtrl`,
       templateUrl : `./../templates/home.html`
     })
+    .state(`viewTournament`, {
+      url: `/tournament`,
+      controller: `tournamentCtrl`,
+      templateUrl: `./../templates/tournament.view.html`
+    })
+    .state(`newTournamentForm`, {
+      url: `/newtournament`,
+      controller: `newTournamentFormCtrl`,
+      templateUrl: `./../templates/new.tournament.form.html`
+    })
+    .state(`dashboard`, {
+      url: `/dashboard`,
+      controller: `userDashboardCtrl`,
+      templateUrl: `./../templates/user.dashboard.html`
+    })
 }]
