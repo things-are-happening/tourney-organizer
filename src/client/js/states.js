@@ -16,22 +16,46 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
   return $stateProvider
     .state(`site`, {
       url: `/`,
-      controller: `siteCtrl`,
-      templateUrl : `./../templates/home.html`
+      views: {
+        "content" : {
+          controller: `siteCtrl`,
+          templateUrl : `./../templates/home.html`
+        }
+      }
     })
-    .state(`viewTournament`, {
+
+
+    .state(`app`, {
+      url: `/app`,
+      // resolve: function() {
+      //
+      // },
+      views: {
+        "content":{
+          controller: `dashboardCtrl`,
+          templateUrl: `./../templates/user/dashboard.html`
+        }
+      }
+    })
+    /**
+      NOTE: Change app states to become child of 'app' for Auth
+    **/
+    .state(`app.tournament`, {
       url: `/tournament`,
-      controller: `tournamentCtrl`,
-      templateUrl: `./../templates/tournament.view.html`
+      views: {
+        "content@" :{
+          controller: `tournamentCtrl`,
+          templateUrl: `./../templates/tournament/view.html`
+        }
+      }
     })
-    .state(`newTournamentForm`, {
-      url: `/newtournament`,
-      controller: `newTournamentFormCtrl`,
-      templateUrl: `./../templates/new.tournament.form.html`
-    })
-    .state(`dashboard`, {
-      url: `/dashboard`,
-      controller: `userDashboardCtrl`,
-      templateUrl: `./../templates/user.dashboard.html`
+    .state(`app.tournament.add`, {
+      url: `/add`,
+      views: {
+        "content@" : {
+          controller: `addTourneyCtrl`,
+          templateUrl: `./../templates/tournament/add.html`
+        }
+      }
     })
 }]
