@@ -2,4 +2,8 @@ node_modules/
 build/
 **/*/secrets.*
 npm-*.**
+<<<<<<< HEAD
 .ds_store
+=======
+asd.js
+>>>>>>> bc2bdbcb02ba5da72ed3c532711d87bcd18d1504
