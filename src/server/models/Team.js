@@ -1,7 +1,7 @@
-import mongoose from 'mongoose'
+import mongoose 	   from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
-let deepPopulate = require(`mongoose-deep-populate`)(mongoose)// this has to be required because mongoose has to be passed in
+let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
 
 let Schema = mongoose.Schema
 
@@ -11,7 +11,7 @@ const TeamSchema = new Schema({
 	 	required: true
 	},
 	teamId: {
-		type: Number,
+		type: String,
 		required: true,
 		unique: true
 	},
@@ -24,9 +24,9 @@ const TeamSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: `Tournament`
 	}]
-}, {timestamp: true, versionKey: false});
+}, {timestamp: true, versionKey: false})
 
 TeamSchema.plugin(uniqueValidator)
 TeamSchema.plugin(deepPopulate)
 
-export default mongoose.model(`Team`, TeamSchema);
+export default mongoose.model(`Team`, TeamSchema)
