@@ -23,7 +23,6 @@ const BracketSchema = new Schema({
       required: true
     }
   ],
-  // teams: Array,
   results: Array,
   matches: Array
   // NOTE: `tournament` feature still WIP
