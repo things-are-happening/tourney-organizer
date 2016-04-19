@@ -1,4 +1,4 @@
-import cookieParser from 'cookie-parser'
+simport cookieParser from 'cookie-parser'
 import bodyParser   from 'body-parser'
 import mongoose     from 'mongoose'
 import passport     from 'passport'
