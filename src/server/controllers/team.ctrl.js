@@ -5,12 +5,12 @@ import {generateKey} from './../helpers/utils'
 export function createTeam(req, res) {
 	req.body.teamId = generateKey(Team, `teamId`)
 	crudCreate(Team, req.body)
-	.then(team => {
-		return res.status(200).send(team)
-	})
-	.catch(err => {
-		return res.status(400).send(err)
-	})	
+		.then(team => {
+			return res.status(200).send(team)
+		})
+		.catch(err => {
+			return res.status(400).send(err)
+		})	
 }
 
 export function getTeam(req, res) {
@@ -18,10 +18,10 @@ export function getTeam(req, res) {
 		teamId: req.params.teamId
 	}
 	crudReadOne(Team, query)
-	.then(bracket => {
-		return res.status(200).send(team)
-	})
-	.catch(err => {
-		return res.status(400).send(err)
-	})
+		.then(bracket => {
+			return res.status(200).send(team)
+		})
+		.catch(err => {
+			return res.status(400).send(err)
+		})
 }
