@@ -11,7 +11,7 @@ const TeamSchema = new Schema({
 	 	required: true
 	},
 	teamId: {
-		type: Number,
+		type: String,
 		required: true,
 		unique: true
 	},
