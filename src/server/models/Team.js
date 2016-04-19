@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose 	   from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
 let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
