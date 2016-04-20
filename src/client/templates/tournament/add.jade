@@ -1,0 +1,16 @@
+section
+	div
+		form(class='newTournamentForm')
+			h1 
+				input(placeholder='Tournament Title')
+			select
+				option Tournament Type
+				option(value='single') Single Elimination
+				option(value='double') Double Elimination
+			input(placeholder='Game Type' | filter)
+			select
+				option Number of Participants
+				option(value='tiny') 2
+				option(value='small') 4
+				option(value='medium') 8
+				option(value='large') 16
