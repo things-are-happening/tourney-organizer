@@ -12,12 +12,12 @@ html(lang='en', ng-app='boilerPlate')
       nav(class="navbar navbar-static")
         div(class="container-fluid")
           div(class="navbar-header")
-            a(ui-sref="app" class="navbar-brand") Brand
+            a(href="#" class="navbar-brand") Brand
           ul(class="nav navbar-nav navbar-right")
             li
-              a(ui-sref='app') Test
+              a(href="#") Test
 
-    article(ui-view="content")
+    article(ui-view="content" class='container')
     
     script(src='bundle.js')
     script(src='https://code.jquery.com/jquery-1.12.3.js')
