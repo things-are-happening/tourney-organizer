@@ -23,8 +23,28 @@ const BracketSchema = new Schema({
       required: true
     }
   ],
-  results: Array,
-  matches: Array
+  // results: Array,
+  // rounds: Array,
+  round:[
+    // Main Bracket
+    [
+      // Round
+      [
+        match: {
+          type: Schema.Types.ObjectId,
+          ref: `Match`
+        }
+      ]
+    ]
+  ],
+  matches: [{
+    type: Schema.Types.ObjectId,
+    ref: `Match`
+  }],
+  brktType: {
+    type: String,
+    required: true
+  }
   // NOTE: `tournament` feature still WIP
   // tournament: {
   //   type: Schema.Types.ObjectId,
