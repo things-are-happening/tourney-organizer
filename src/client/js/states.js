@@ -12,7 +12,7 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
       }
     }
   })
-  $urlRouterProvider.otherwise('/')
+  // $urlRouterProvider.otherwise('/')
   return $stateProvider
     .state(`site`, {
       url: `/`,
