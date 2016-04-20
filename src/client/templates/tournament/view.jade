@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-div(class='flex space-between container')
-	ul(class='nav nav-tabs')
-		li(class='nav active bracketTab')
-			a(data-toggle='tab' href="#roundone") Round 1
-		li(class='nav bracketTab')
-			a(data-toggle='tab' href='#roundtwo') Round 2
-		li(class='nav bracketTab')
-			a(data-toggle='tab') Quarter Finals
-		li(class='nav bracketTab')
-			a(data-toggle='tab') Semi Finals
-		li(class='nav bracketTab')
-			a(data-toggle='tab') Finals
-div(class='tab-content')			
-
-	//- content for round one
-
-	div(class='container-fluid view-body tab-pane fade in active' id='roundone')
-		div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
-			a(href='http://google.com')
-				div(class='match-panel')
-					div(class='team-names')
-						div(class='flex direction-row space-between')
-							h4 {{match.teamOne}}:
-							div(class='scorePosition')
-								h4 {{match.teamOneScore}}
-						div(class='flex direction-row space-between')
-							h4 {{match.teamTwo}}:
-							div
-								h4 {{match.teamTwoScore}}
-						div(class='flex space-around match-panel-date')
-							{{match.date}}, {{match.time}}
-
-	//- content for round two
-
-	div(class='container-fluid view-body tab-pane fade in active' id='roundtwo').
-		testing
-=======
 div(class='flex space-between page-header container')
     ul(class='nav nav-tabs')
         li(class='bracketTab active')
@@ -96,4 +58,4 @@ div(class='tab-content')
             //- 	p {{match.time}}
             //- 	p {{match.date}}
             //- 	p {{match.location}}
->>>>>>> b88edb1cb65fc365f82f7c89de8bb5051f2f5b25
+
