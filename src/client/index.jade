@@ -12,10 +12,10 @@ html(lang='en', ng-app='boilerPlate')
       nav(class="navbar navbar-static")
         div(class="container-fluid")
           div(class="navbar-header")
-            a(href="#" class="navbar-brand") Brand
+            a(ui-sref="app" class="navbar-brand") Brand
           ul(class="nav navbar-nav navbar-right")
             li
-              a(href="#") Test
+              a(ui-sref='app') Test
 
     article(ui-view="content" class='container')
     

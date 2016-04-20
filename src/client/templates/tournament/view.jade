@@ -1,6 +1,25 @@
-View Tournament
-  
-div(class='finals')
-	div(class='semifinals')
-		div(class='quarterfinals')
-			div(class='bestofsixteen')
+div(class='flex space-between page-header')
+	a(href='http://google.com') round 1
+	a(href='http://google.com') round 2
+	a(href='http://google.com') quarter finals
+	a(href='http://google.com') semi finals
+	a(href='http://google.com') finals
+div 
+	div(class='col-md-3 match-panel' ng-repeat='match in matches')
+		a(href='http://google.com')
+			div(class='flex direction-row space-between wrap')
+				div(class='flex direction-column vertical-center')
+					h3 {{match.teamOne}} 
+					p {{match.teamOneScore}}
+				h3 vs 
+				div(class='flex direction-column vertical-center')
+					h3 {{match.teamTwo}}
+					p {{match.teamTwoScore}}
+			div(class='flex vertical-center direction-column')
+				p {{match.time}}
+				p {{match.date}}
+				p {{match.location}}
+
+		
+			
+
