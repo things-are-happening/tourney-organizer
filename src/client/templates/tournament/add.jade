@@ -1,6 +1,6 @@
 section
 	div
-		form(class='newTournamentForm center-text row flex direction-row')
+		form(class='newTournamentForm center-text row flex direction-column')
 			h1
 				input(placeholder='Add Tournament Title' class='addTournamentTitle center-text' onblur='this.placeholder="Add Tournament Title"' onfocus='this.placeholder = ""')
 			div(class='form-group flex space-around')
@@ -29,5 +29,5 @@ section
 					option(value='large') 16
 					option(value='giant') 32
 					option(value='wumbo') 64
-					
+
 			button(class='btn btn-default' type='submit' ui-sref='app') Lets gooooooo
