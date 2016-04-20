@@ -144,12 +144,7 @@ module.exports = [`$scope`, ($scope) => {
 		time: "5:30 pm",
 		location: "Brazil"
 	}]
-
-	$scope.matches = fakeMatchData
-
-    $('#myTabs a').click(function(e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
+	
+	$scope.matches = fakeMatchData  
   $scope.test = true
 }]
