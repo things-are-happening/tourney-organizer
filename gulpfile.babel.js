@@ -1,13 +1,13 @@
-import gulp from 'gulp'
-import jade from 'gulp-jade'
-import babel from 'gulp-babel'
-import source from 'vinyl-source-stream'
-import stylus from 'gulp-stylus'
-import nodemon from 'gulp-nodemon'
-import watchify from 'watchify'
-import browserify from 'browserify'
-import sourcemaps from 'gulp-sourcemaps'
-import runSequence from 'run-sequence'
+import gulp         from 'gulp'
+import jade         from 'gulp-jade'
+import babel        from 'gulp-babel'
+import source       from 'vinyl-source-stream'
+import stylus       from 'gulp-stylus'
+import nodemon      from 'gulp-nodemon'
+import watchify     from 'watchify'
+import browserify   from 'browserify'
+import sourcemaps   from 'gulp-sourcemaps'
+import runSequence  from 'run-sequence'
 
 gulp.task(`move`, () => {
   gulp.src('./src/client/js/**/*.js')

@@ -6,18 +6,18 @@ html(lang='en', ng-app='boilerPlate')
     link(rel='stylesheet', href='style.css')
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
 
-  header
-    nav(class="navbar navbar-static")
-      div(class="container-fluid")
-        div(class="navbar-header")
-          #[a(href="#" class="navbar-brand") Brand]
-        ul(class="nav navbar-nav navbar-right")
-          li
-            #[a(href="#" ) Test]
-
   body
-    
-    article(ui-view class='container')
+  
+    header
+      nav(class="navbar navbar-static")
+        div(class="container-fluid")
+          div(class="navbar-header")
+            a(ui-sref="app" class="navbar-brand") Brand
+          ul(class="nav navbar-nav navbar-right")
+            li
+              a(ui-sref='app') Test
+
+    article(ui-view="content")
     
     script(src='bundle.js')
     script(src='https://code.jquery.com/jquery-1.12.3.js')

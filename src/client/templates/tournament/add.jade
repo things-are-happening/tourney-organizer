@@ -1,0 +1,33 @@
+section(class='container')
+	div
+		form(class='newTournamentForm center-text row flex direction-column')
+			h1
+				input(placeholder='Add Tournament Title' class='addTournamentTitle center-text' onblur='this.placeholder="Add Tournament Title"' onfocus='this.placeholder = ""')
+			div(class='form-group flex space-around')
+				div
+					label Start Date
+					input(type='date')
+				div		
+					label End Date
+					input(type='date')		
+			div(class='form-group')
+				select(class='form-control')
+					option Tournament Type
+					option(value='single') Single Elimination
+					option(value='double') Double Elimination
+			div(class='form-group')
+				select(class='form-control')
+					option Game Type
+					option(value='soccer') Soccer
+					option(value='table-tennis') Table Tennis
+			div(class='form-group')		
+				select(class='form-control')
+					option Number of Participants
+					option(value='tiny') 2
+					option(value='small') 4
+					option(value='medium') 8
+					option(value='large') 16
+					option(value='giant') 32
+					option(value='wumbo') 64
+
+			button(class='btn btn-default' type='submit' ui-sref='app') Lets gooooooo

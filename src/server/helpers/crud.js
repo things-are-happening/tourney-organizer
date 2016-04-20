@@ -1,7 +1,8 @@
 import q from 'q'
 
 const populateModel = ( Model, query,  popString ) => {
-  popString = popString.replace(/,/g, ' ')
+  if(popString.indexOf(',') >= 0)
+    popString = popString.replace(/,/g, ' ')
   return Model.findOne(query)
   .populate(popString)
   .exec((err, result) => {

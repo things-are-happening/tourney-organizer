@@ -1,0 +1,42 @@
+div(class='flex space-between page-header container')
+	ul(class='nav nav-tabs')
+		li
+			a(data-toggle="tab" href="#roundone" aria-controls="roundone" id='roundone-tab') Round 1
+		li
+			a(data-toggle="tab") Round 2
+		li
+			a(data-toggle="tab") Quarter Finals
+		li
+			a(data-toggle="tab") Semi Finals
+		li(class="active")
+			a(data-toggle="tab") Finals
+div(class='tab-content')			
+	div(class='container-fluid view-body tab-pane' id='roundone' role='tabpanel' aria-labelledby='roundone-tab')
+		div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
+			a(href='http://google.com')
+				div(class='match-panel')
+					div(class='team-names')
+						div(class='flex direction-row space-between')
+							h4 {{match.teamOne}}:
+							div(class='scorePosition')
+								h4 {{match.teamOneScore}}
+						div(class='flex direction-row space-between')
+							h4 {{match.teamTwo}}:
+							div
+								h4 {{match.teamTwoScore}}
+						div(class='flex space-around match-panel-date')
+							{{match.date}}, {{match.time}}
+
+			//- div(class='flex direction-row space-between')
+			//- 	div(class='flex direction-column vertical-center team')
+			//- 		h3(class='vertical-text-center') {{match.teamOne}} 				
+			//- 	h3 vs 
+			//- 	div(class='flex direction-column vertical-center team')
+			//- 		h3(class='vertical-text-center') {{match.teamTwo}}	
+			//- div(class='scorePosition flex direction-row space-between')
+			//- 	p {{match.teamOneScore}}
+			//- 	p {{match.teamTwoScore}}
+			//- div(class='flex vertical-center direction-column')
+			//- 	p {{match.time}}
+			//- 	p {{match.date}}
+			//- 	p {{match.location}}
