@@ -7,3 +7,4 @@ angular.module(`boilerPlate`, [`ui.router`, `ngSanitize`])
 
 
 require(`./controllers/controllers`)
+require(`./services/tournament/tournamentService`)

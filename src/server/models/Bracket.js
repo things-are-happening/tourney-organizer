@@ -7,29 +7,7 @@ let deepPopulate = require('mongoose-deep-populate')(mongoose)
 let Schema = mongoose.Schema
 
 const BracketSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  bracketId: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  teams: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: `Team`,
-      required: true
-    }
-  ],
-  results: Array,
-  matches: Array
-  // NOTE: `tournament` feature still WIP
-  // tournament: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: `Tournament`
-  // }
+
 },{timestamp: true, versionKey: false})
 
 BracketSchema.plugin(uniqueValidator)

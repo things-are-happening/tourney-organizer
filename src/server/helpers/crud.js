@@ -17,12 +17,16 @@ const populateModel = ( Model, query,  popString ) => {
 Create
 *******************************************************************************/
 export function crudCreate ( Model, body ){
+  console.log(`CRUD CREATE`);
   let dfd = q.defer()
   new Model(body).save()
     .then(result => {
+      console.log(`CRUD CREATE RESULT >>>>`)
+      console.log(result)
       return dfd.resolve(result)
     })
     .catch(err => {
+      console.log(`CRUD CREATE ERROR`);
       return dfd.reject(err)
     })
     return dfd.promise
