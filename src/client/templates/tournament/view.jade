@@ -1,17 +1,17 @@
 div(class='flex space-between page-header container')
     ul(class='nav nav-tabs')
-        li(class='bracketTab active')
-            a(href="#1" data-toggle="tab" id='roundone-tab') Round 1
-        li(class='bracketTab')
+        li(class='active')
+            a(href="#1" data-toggle="tab") Round 1
+        li
             a(href="#2" data-toggle="tab") Round 2
-        li(class='bracketTab')
+        li
             a(href="#3" data-toggle="tab") Quarter Finals
-        li(class='bracketTab')
+        li
             a(href="#4" data-toggle="tab") Semi Finals
-        li(class='bracketTab')
+        li
             a(href="#5" data-toggle="tab") Finals
 div(class='tab-content')			
-    div(class='container-fluid view-body tab-pane' id='1' role='tabpanel')
+    div(class='container-fluid view-body tab-pane active' id='1' role='tabpanel')
         div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
             a(href='http://google.com')
                 div(class='match-panel')
@@ -27,22 +27,22 @@ div(class='tab-content')
                         div(class='flex space-around match-panel-date')
                             {{match.date}}, {{match.time}}
 
-div(class='tab-content')			
     div(class='container-fluid view-body tab-pane' id='2' role='tabpanel')
         div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
             a(href='http://google.com')
                 div(class='match-panel')
                     div(class='team-names')
                         div(class='flex direction-row space-between')
-                            h4 TEAM ONE:{{match.teamOne}}:
+                            h4 {{match.teamOne}}:
                             div(class='scorePosition')
-                                h4 SCORE:{{match.teamOneScore}} LOOK AT ME LOOK AT ME
+                                h4 SCORE:{{match.teamOneScore}} yo
                         div(class='flex direction-row space-between')
-                            h4 TEAM TWO:{{match.teamTwo}}:
+                            h4 {{match.teamTwo}}:
                             div
                                 h4 {{match.teamTwoScore}}
                         div(class='flex space-around match-panel-date')
-                            {{match.date}}, {{match.time}}
+                            {{match.date}}, {{match.time}}		
+
 
 
             //- div(class='flex direction-row space-between')
