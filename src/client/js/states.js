@@ -12,11 +12,59 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
       }
     }
   })
-  $urlRouterProvider.otherwise('/')
+  // $urlRouterProvider.otherwise('/')
   return $stateProvider
     .state(`site`, {
       url: `/`,
-      controller: `siteCtrl`,
-      templateUrl : `./../templates/home.html`
+      views: {
+        "content" : {
+          controller: `siteCtrl`,
+          templateUrl : `./../templates/home.html`
+        }
+      }
+    })
+
+
+    .state(`app`, {
+      url: `/app`,
+      // resolve: function() {
+      //
+      // },
+      views: {
+        "content":{
+          controller: `dashboardCtrl`,
+          templateUrl: `./../templates/user/dashboard.html`
+        }
+      }
+    })
+    /**
+      NOTE: Change app states to become child of 'app' for Auth
+    **/
+    .state(`app.tournament`, {
+      url: `/tournament`,
+      views: {
+        "content@" :{
+          controller: `tournamentCtrl`,
+          templateUrl: `./../templates/tournament/view.html`
+        }
+      }
+    })
+    .state(`app.tournament.add`, {
+      url: `/add`,
+      views: {
+        "content@" : {
+          controller: `addTourneyCtrl`,
+          templateUrl: `./../templates/tournament/add.html`
+        }
+      }
+    })
+    .state(`app.tournament.view`, {
+      url: `/view`,
+      views: {
+        "content@" : {
+          controller: `viewTourneyCtrl`,
+          templateUrl: `./../templates/tournament/view.html`
+        }
+      }
     })
 }]

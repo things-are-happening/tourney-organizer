@@ -4,4 +4,7 @@ module.exports = app => {
   app.post(`/api/bracket`, createBracket)
   app.route(`/api/bracket/:bracketId`)
     .get(getBracket)
+    // .patch()
+    // .put()
+    // .delete()
 }

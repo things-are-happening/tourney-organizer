@@ -1,7 +1,8 @@
 import q from 'q'
 
 const populateModel = ( Model, query,  popString ) => {
-  popString = popString.replace(/,/g, ' ')
+  if(popString.indexOf(',') >= 0)
+    popString = popString.replace(/,/g, ' ')
   return Model.findOne(query)
   .populate(popString)
   .exec((err, result) => {
@@ -16,12 +17,16 @@ const populateModel = ( Model, query,  popString ) => {
 Create
 *******************************************************************************/
 export function crudCreate ( Model, body ){
+  console.log(`CRUD CREATE`);
   let dfd = q.defer()
   new Model(body).save()
     .then(result => {
+      console.log(`CRUD CREATE RESULT >>>>`)
+      console.log(result)
       return dfd.resolve(result)
     })
     .catch(err => {
+      console.log(`CRUD CREATE ERROR`);
       return dfd.reject(err)
     })
     return dfd.promise
