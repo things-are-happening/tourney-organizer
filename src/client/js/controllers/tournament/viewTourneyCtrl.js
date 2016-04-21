@@ -1,8 +1,8 @@
 module.exports = [`$scope`, ($scope) => {
 
 	var fakeMatchData = [{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
+		teamOne: "Team Solomid",
+		teamTwo: "Cloud9",
 		teamOneScore: 10,
 		teamTwoScore: 9,
 		date: "4/19/2016",
@@ -19,8 +19,8 @@ module.exports = [`$scope`, ($scope) => {
 		location: "Brazil"
 	},
 	{
-		teamOne: "Joseph",
-		teamTwo: "Barry",
+		teamOne: "Los Angeles Lakers",
+		teamTwo: "Dallas Mavericks",
 		teamOneScore: 1,
 		teamTwoScore: 2,
 		date: "4/19/2016",
@@ -28,17 +28,17 @@ module.exports = [`$scope`, ($scope) => {
 		location: "Brazil"
 	},
 	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOne: "Counter-Logic Gaming",
+		teamTwo: "Team Liquid",
+		teamOneScore: 110,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
 		location: "Brazil"
 	},
 	{
-		teamOne: "Democratic Peoples Republic of Korea",
-		teamTwo: "Republic of Korea",
+		teamOne: "DPRK",
+		teamTwo: "ROK",
 		teamOneScore: 0,
 		teamTwoScore: 10,
 		date: "4/19/2016",
@@ -46,9 +46,18 @@ module.exports = [`$scope`, ($scope) => {
 		location: "Brazil"
 	},
 	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOne: "Fnatic",
+		teamTwo: "G2 Gaming",
+		teamOneScore: 10,
+		teamTwoScore: 2,
+		date: "4/19/2016",
+		time: "5:30 pm",
+		location: "Brazil"
+	},
+	{
+		teamOne: "SKT Telecom T1",
+		teamTwo: "KT Rolsters",
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -57,7 +66,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -66,7 +75,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -75,7 +84,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -84,7 +93,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -93,7 +102,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -102,7 +111,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -111,7 +120,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -120,7 +129,7 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
@@ -129,14 +138,13 @@ module.exports = [`$scope`, ($scope) => {
 	{
 		teamOne: "Joseph",
 		teamTwo: "Daniel",
-		teamOneScore: 1000,
+		teamOneScore: 10,
 		teamTwoScore: 2,
 		date: "4/19/2016",
 		time: "5:30 pm",
 		location: "Brazil"
 	}]
-
-	$scope.matches = fakeMatchData
-
+	
+	$scope.matches = fakeMatchData  
   $scope.test = true
 }]
