@@ -1,7 +1,7 @@
-import _ from 'lodash'
-import Bracket from './../models/Bracket'
+import _                         from 'lodash'
+import Bracket                   from './../models/Bracket'
 import {crudCreate, crudReadOne} from './../helpers/crud'
-import {generateKey} from './../helpers/utils'
+import {generateKey}             from './../helpers/utils'
 
 const generateMatches = data => {
   let matches
