@@ -12,7 +12,7 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
       }
     }
   })
-  $urlRouterProvider.otherwise('/')
+  // $urlRouterProvider.otherwise('/')
   return $stateProvider
     .state(`site`, {
       url: `/`,
@@ -55,6 +55,15 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
         "content@" : {
           controller: `addTourneyCtrl`,
           templateUrl: `./../templates/tournament/add.html`
+        }
+      }
+    })
+    .state(`app.tournament.view`, {
+      url: `/view`,
+      views: {
+        "content@" : {
+          controller: `viewTourneyCtrl`,
+          templateUrl: `./../templates/tournament/view.html`
         }
       }
     })

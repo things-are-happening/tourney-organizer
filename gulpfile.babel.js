@@ -60,7 +60,7 @@ const bundle = (bundler) =>{
 }
 
 gulp.task(`bundle`, () => {
-  bundle(browserify(`./src/client/js/app.js`))
+  bundle(browserify(`./src/client/**/*.js`))
 })
 
 gulp.task('watchify', () =>{
