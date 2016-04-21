@@ -1,9 +1,9 @@
-import {createRound, getRound} from './../controllers/round.ctrl'
+import {createMatch, getMatch} from './../controllers/match.ctrl'
 
 module.exports = app => {
-  app.route(`/api/round`)
-    .post(createRound)
-    .get(getRound)
+  app.route(`/api/match`)
+    .post(createMatch)
+    .get(getMatch)
     // .patch()
     // .put()
     // .delete()

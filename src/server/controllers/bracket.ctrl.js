@@ -7,8 +7,7 @@ import {generateKey} from './../helpers/utils'
 const generateMatches = (teams, rounds) => {
   let matches = _.chunk(teams, 2)
   // NOTE: Create `Match` populate logic here
-  for()
-  crudCreate(Match, )
+
   return matches
 }
 
@@ -17,13 +16,6 @@ export function createBracket (req, res) {
   generateMatches( req.body.teams, req.body.rounds )
   crudCreate( Bracket, req.body )
     .then( bracket => {
-
-      /**
-        NOTE:
-          -> create rounds based on matches and populate `Match` then update
-          -> `bracket` with set references added to `bracket.rounds`
-      **/
-
       return res.status(200).send(bracket)
     })
     .catch( err => {
