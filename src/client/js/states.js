@@ -59,7 +59,7 @@ module.exports = [`$urlRouterProvider`, `$stateProvider`, `$httpProvider`,
       }
     })
     .state(`app.tournament.view`, {
-      url: `/view`,
+      url: `/view/:tournamentId`,
       views: {
         "content@" : {
           controller: `viewTourneyCtrl`,

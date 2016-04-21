@@ -1,150 +1,87 @@
 module.exports = [`$scope`, ($scope) => {
 
-	var fakeMatchData = [{
-		teamOne: "Team Solomid",
-		teamTwo: "Cloud9",
-		teamOneScore: 10,
-		teamTwoScore: 9,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
+	let fakeTrounamentData =
 	{
-		teamOne: "New York Yankees",
-		teamTwo: "Boston Red Sox",
-		teamOneScore: 1,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Los Angeles Lakers",
-		teamTwo: "Dallas Mavericks",
-		teamOneScore: 1,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Counter-Logic Gaming",
-		teamTwo: "Team Liquid",
-		teamOneScore: 110,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "DPRK",
-		teamTwo: "ROK",
-		teamOneScore: 0,
-		teamTwoScore: 10,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Fnatic",
-		teamTwo: "G2 Gaming",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "SKT Telecom T1",
-		teamTwo: "KT Rolsters",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	},
-	{
-		teamOne: "Joseph",
-		teamTwo: "Daniel",
-		teamOneScore: 10,
-		teamTwoScore: 2,
-		date: "4/19/2016",
-		time: "5:30 pm",
-		location: "Brazil"
-	}]
-	
-	$scope.matches = fakeMatchData  
-  $scope.test = true
+	   "_id" : "5719128d55eccdca822ca4bb",
+	   "name" : "Tournament",
+	   "sport" : "Some Sport",
+	   "amountTeams" : 8,
+	   "bracketType": "single",
+	   "date" : {
+	     "start" : {
+	       "dd" : "04",
+	       "mm" : "20",
+	       "yy" : "2016"
+	     },
+	     "end" : {
+	       "dd" : "05",
+	       "mm" : "21",
+	       "yy" : "2016"
+	     }
+	   },
+	   "time" : {
+	     "hh" : "04",
+	     "mm" : "20"
+	   },
+	   "bracket" :
+	   [
+	    {
+	       "round_1":
+	       [
+	        [{
+	          "team_1": {
+	            "name": "Team 1",
+	              "score": 3
+	            },
+	            "team_2": {
+	              "name": "Team 2",
+	              "score": 2
+	            }
+	          },
+	          {
+	            "team_1": {
+	             "name": "Team 3",
+	             "score": 2
+	           },
+	           "team_2": {
+	             "name": "Team 4",
+	             "score": 3
+	           }
+	         }],
+	         [
+	           {
+	             "team_1": {
+	               "name": "Team 5",
+	               "score": 3
+	             },
+	             "team_2": {
+	               "name": "Team 6",
+	               "score": 0
+	             }
+	           },
+	           {
+
+	             "team_1": {
+	               "name": "Team 7",
+	               "score": 1
+	             },
+	             "team_2": {
+	               "name": "Team 8",
+	               "score": 3
+	             }
+	           }
+	         ]
+	       ],
+	       "round_2" :[
+	         ["TBA","TBA"]
+	       ]
+	     }
+	   ]
+	 }
+
+ $scope.roundChange = (round) => {
+	 
+ }
+ $scope.matches = fakeTrounamentData
+ $scope.test = true
 }]
