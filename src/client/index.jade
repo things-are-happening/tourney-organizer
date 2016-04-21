@@ -1,11 +1,27 @@
 doctype html
-html(lang='en' ng-app='boilerPlate')
+html(lang='en', ng-app='boilerPlate')
   head
     title App Name
-    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
-    link(rel='stylesheet' href='style.css')
-  body
-    article(ui-view class='container-fluid')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    link(rel='stylesheet', href='style.css')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
+
+    
     script(src='bundle.js')
     script(src='https://code.jquery.com/jquery-1.12.3.js')
+    script(src='script/jq-scripts.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    
+  body
+  
+    header
+      nav(class="navbar navbar-static")
+        div(class="container-fluid")
+          div(class="navbar-header")
+            a(ui-sref="app" class="navbar-brand") Brand
+          ul(class="nav navbar-nav navbar-right")
+            li
+              a(ui-sref='app') Test
+
+    article(ui-view="content")
+    
