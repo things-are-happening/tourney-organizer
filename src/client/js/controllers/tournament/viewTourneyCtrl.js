@@ -8,6 +8,7 @@ module.exports = [`$scope`, ($scope) => {
 		date: "4/19/2016",
 		time: "5:30 pm",
 		location: "Brazil"
+		
 	},
 	{
 		teamOne: "New York Yankees",

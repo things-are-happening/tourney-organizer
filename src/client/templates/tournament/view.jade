@@ -5,11 +5,13 @@ div(class='flex space-between container')
 		li(class='bracketTab')
 			a(href="#round2" data-toggle="tab") Round 2
 		li(class='bracketTab')
-			a(href="#3" data-toggle="tab") Quarter Finals
+			a(href="#round3" data-toggle="tab") Quarter Finals
 		li(class='bracketTab')
-			a(href="#4" data-toggle="tab") Semi Finals
+			a(href="#round4" data-toggle="tab") Semi Finals
 		li(class='bracketTab')
-			a(href="#5" data-toggle="tab") Finals
+			a(href="#round5" data-toggle="tab") Finals
+
+//- Content for first tab, round one
 
 div(class='tab-content')			
 	div(class='container-fluid view-body tab-pane active' id='round1' role='tabpanel')
@@ -28,7 +30,64 @@ div(class='tab-content')
 						div(class='flex space-around match-panel-date')
 							{{match.date}}, {{match.time}}		
 
+	//- Content for round 2
+
 	div(class='container-fluid view-body tab-pane' id='round2' role='tabpanel')
+		div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
+			a(href='/')
+				div(class='match-panel')
+					div(class='team-names')
+						div(class='flex direction-row space-between')
+							h4 TEAM ONE:{{match.teamOne}}:
+							div(class='scorePosition')
+								h4 SCORE:{{match.teamOneScore}} LOOK AT ME LOOK AT ME
+						div(class='flex direction-row space-between')
+							h4 TEAM TWO:{{match.teamTwo}}:
+							div
+								h4 {{match.teamTwoScore}}
+						div(class='flex space-around match-panel-date')
+							{{match.date}}, {{match.time}}
+
+
+	//- Content for round 3
+
+	div(class='container-fluid view-body tab-pane' id='round3' role='tabpanel')
+		div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
+			a(href='/')
+				div(class='match-panel')
+					div(class='team-names')
+						div(class='flex direction-row space-between')
+							h4 TEAM ONE:{{match.teamOne}}:
+							div(class='scorePosition')
+								h4 SCORE:{{match.teamOneScore}} LOOK AT ME LOOK AT ME
+						div(class='flex direction-row space-between')
+							h4 TEAM TWO:{{match.teamTwo}}:
+							div
+								h4 {{match.teamTwoScore}}
+						div(class='flex space-around match-panel-date')
+							{{match.date}}, {{match.time}}
+
+	//- Content for round 4
+
+	div(class='container-fluid view-body tab-pane' id='round4' role='tabpanel')
+		div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
+			a(href='/')
+				div(class='match-panel')
+					div(class='team-names')
+						div(class='flex direction-row space-between')
+							h4 TEAM ONE:{{match.teamOne}}:
+							div(class='scorePosition')
+								h4 SCORE:{{match.teamOneScore}} LOOK AT ME LOOK AT ME
+						div(class='flex direction-row space-between')
+							h4 TEAM TWO:{{match.teamTwo}}:
+							div
+								h4 {{match.teamTwoScore}}
+						div(class='flex space-around match-panel-date')
+							{{match.date}}, {{match.time}}
+
+	//- Content for finals
+
+	div(class='container-fluid view-body tab-pane' id='round5' role='tabpanel')
 		div(class='col-md-3 col-sm-6' ng-repeat='match in matches')
 			a(href='/')
 				div(class='match-panel')

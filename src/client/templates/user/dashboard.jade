@@ -1,5 +1,7 @@
 div(class='dashboardBodyMain container')
-	input(type='search' class='tournamentSearch form-control' placeholder='Search Tournaments')
+	form(id='live-search' action='' class='styled' method='post')
+		fieldset
+			input(type='search' class='tournamentSearch form-control' id='filter' value='' placeholder='Search Tournaments')
 	div(class='active dashboardPanel row')
 		h2.page-header.
 			Active Tournaments
@@ -8,8 +10,8 @@ div(class='dashboardBodyMain container')
 				div.col-xs-12.flex.vertical-center.space-around.display-panel		
 					i(class='fa fa-plus fa-5x')
 		div(class='col-sm-9')
-			a(ui-sref='app.tournament.view')
-				div(class='col-md-4 col-xs-6' ng-repeat='tournament in tournaments')
+			div(class='col-md-4 col-xs-6' ng-repeat='tournament in tournaments')
+				a(ui-sref='app.tournament.view')
 					h1 {{tournament.name}}
 					h3 {{tournament.game}}
 					h4 {{tournament.date}}
