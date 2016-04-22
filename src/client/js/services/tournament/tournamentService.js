@@ -1,5 +1,5 @@
 module.exports = [`$http`, `$q`, ($http, $q) => {
-	this.generateBracket = function(){
-		console.log("testing")
+	this.generateBracketservice = function(tournament){
+		return $http.post('/api/bracket', tournament)
 	}
 }]
