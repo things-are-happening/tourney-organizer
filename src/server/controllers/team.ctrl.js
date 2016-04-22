@@ -18,7 +18,7 @@ export function getTeam(req, res) {
 		teamId: req.params.teamId
 	}
 	crudReadOne(Team, query)
-		.then(bracket => {
+		.then(team => {
 			return res.status(200).send(team)
 		})
 		.catch(err => {

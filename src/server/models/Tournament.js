@@ -6,24 +6,25 @@ let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
 let Schema = mongoose.Schema
 
 const TournamentSchema = new Schema({
+	sport: {
+		type: String,
+		required: true
+	}
 	name: {
 		type: String,
-	 	required: true
+		required: true
 	},
 	tournamentId: {
 		type: String,
 		required: true,
 		unique: true
 	},
-	players: Array,
 	owner: {
 		type: Schema.Types.ObjectId,
 		ref: `User`
 	},
-	teams: [{
-		type: Schema.Types.ObjectId,
-		ref: `Team`
-	}]
+	teams: Number,
+	bracket: Array
 }, {timestamp: true, versionKey: false})
 
 TeamSchema.plugin(uniqueValidator)

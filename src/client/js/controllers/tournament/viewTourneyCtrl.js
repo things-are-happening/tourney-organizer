@@ -144,7 +144,17 @@ module.exports = [`$scope`, ($scope) => {
 		time: "5:30 pm",
 		location: "Brazil"
 	}]
+<<<<<<< HEAD
 	
 	$scope.matches = fakeMatchData  
+=======
+
+	$scope.matches = fakeMatchData
+
+    $('#myTabs a').click(function(e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+>>>>>>> 5689fecc4003ce9cd89343089777417ca902ba76
   $scope.test = true
 }]
