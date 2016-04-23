@@ -6,7 +6,7 @@ module.exports = [`$scope`, ($scope) => {
 		location: 'New York',
 		numberOfTeams: 21
 	}, {
-		name: 'World cup of Soccers',
+		name: 'DevMountain Table Tennis Tourney',
 		game: 'Soccer',
 		date: '3/3/2016',
 		location: 'Rio',
