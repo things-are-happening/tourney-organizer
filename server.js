@@ -7,13 +7,13 @@ var morgan = require('morgan')
 var app = express();
 
 //controllers
-var tournament = require('./controllers/tournamentCtrl')
-var match = require('./controllers/matchCtrl')
-var team = require('./controllers/teamCtrl')
+var tournament = require('./server/controllers/tournamentCtrl')
+var match = require('./server/controllers/matchCtrl')
+var team = require('./server/controllers/teamCtrl')
 
 
 //middleware
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build/client'));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan('dev'));
@@ -40,12 +40,14 @@ app.delete('/api/team/:id', team.delete);
 
 
  //connecting
-var port = 8090;
+var port = 8096;
 var mongoUri = 'mongodb://localhost:27017/tourney-organizer';
+
+app.listen(port, function() {
+	console.log('I got an ear out for port ' + port)
+})
+
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
     console.log('Connected to mongo at: ' + mongoUri);
-})
-app.listen(port, function() {
-	console.log('I got an ear out for port ' + port)
 })
