@@ -1,33 +1,27 @@
-section(class='container')
+section(class='dashboardBodyMain container-fluid')
 	div
 		form(class='newTournamentForm center-text row flex direction-column')
 			h1
-				input(placeholder='Add Tournament Title' class='addTournamentTitle center-text' onblur='this.placeholder="Add Tournament Title"' onfocus='this.placeholder = ""')
+				input(placeholder='Add Tournament Title' class='addTournamentTitle center-text' onblur='this.placeholder="Add Tournament Title"' onfocus='this.placeholder = ""' ng-model='tournamentTitle' maxlength='30')
 			div(class='form-group flex space-around')
 				div
 					label Start Date
-					input(type='date')
+					input(type='date' ng-model='tournament.startDate')
 				div		
 					label End Date
-					input(type='date')		
+					input(type='date' ng-model='tournament.endDate')		
 			div(class='form-group')
-				select(class='form-control')
-					option Tournament Type
-					option(value='single') Single Elimination
-					option(value='double') Double Elimination
+				select(class='form-control' ng-model='tournament.type')
+					option(value='' default selected) Tournament Type
+					option(ng-repeat='type in tournamentType' value='{{type.id}}') {{type.type}}
 			div(class='form-group')
-				select(class='form-control')
-					option Game Type
-					option(value='soccer') Soccer
-					option(value='table-tennis') Table Tennis
+				select(class='form-control' ng-model='tournament.game')
+					option(value='' default selected) Game Type
+					option(ng-repeat='type in gameType' value='{{type.id}}') {{type.type}}
 			div(class='form-group')		
-				select(class='form-control')
-					option Number of Participants
-					option(value='tiny') 2
-					option(value='small') 4
-					option(value='medium') 8
-					option(value='large') 16
-					option(value='giant') 32
-					option(value='wumbo') 64
+				select(class='form-control' ng-model='tournament.teams')
+					option(value='' default selected) Number of Participants
+					option(ng-repeat='size in tournamentSize') {{size}}
 
-			button(class='btn btn-default' type='submit' ui-sref='app') Lets gooooooo
+
+			button(class='btn btn-default' type='submit' ng-click='generateBracket(tournament)') Lets gooooooo
