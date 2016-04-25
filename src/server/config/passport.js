@@ -1,12 +1,12 @@
-let LocalStrategy = require('passport-local').Strategy
+var LocalStrategy = require('passport-local').Strategy
 
-export default (passport, model) => {
-  passport.serializeUser((user, done) => {
+module.exports = function(passport, model) {
+  passport.serializeUser(function(user, done) {
     done(null, user._id)
   })
 
-  passport.deserializeUser((username, done) => {
-    model.find({username: username}, (err, user) => {
+  passport.deserializeUser(function(username, done) {
+    model.find({username: username}, function(err, user) {
       done(err, user)
     })
   })
@@ -15,8 +15,8 @@ export default (passport, model) => {
       // {
       //
       // },
-    (username, password, done) => {
-      model.findOne({username: username}, (err, user) => {
+    function(username, password, done) {
+      model.findOne({username: username}, function(err, user) {
         if(err)
           return done(err)
         if(!user)
