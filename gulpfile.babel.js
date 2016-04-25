@@ -15,7 +15,7 @@ gulp.task(`move`, () => {
 })
 
 gulp.tastk(`assets`, () => {
-  gulp.src(`./src/client/assets`)
+  gulp.src(`./src/client/assets/*`)
     .pipe(gulp.dest(`/build/assets`))
 })
 
