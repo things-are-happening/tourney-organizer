@@ -12,29 +12,29 @@ module.exports = [`$scope`, ($scope) => {
 		location: 'Rio',
 		numberOfTeams: 24
 	}, {
-		name: 'World Series',
+		name: 'World Cup',
 		game: 'Baseball',
 		date: '3/3/2016',
-		location: 'New York',
-		numberOfTeams: 21
+		location: 'eh',
+		numberOfTeams: 16
 	}, {
-		name: 'World Series',
+		name: 'Eastern Conference',
 		game: 'Baseball',
 		date: '3/3/2016',
-		location: 'New York',
-		numberOfTeams: 21
+		location: 'Boston',
+		numberOfTeams: 8
 	}, {
-		name: 'World Series',
+		name: 'NA LCS Playoffs',
 		game: 'Baseball',
 		date: '3/3/2016',
-		location: 'New York',
-		numberOfTeams: 21
+		location: 'Las Vegas',
+		numberOfTeams: 16
 	}, {
-		name: 'World Series',
+		name: 'FIFA',
 		game: 'Baseball',
 		date: '3/3/2016',
-		location: 'New York',
-		numberOfTeams: 21
+		location: 'Rio',
+		numberOfTeams: 32
 	}, ]
   $scope.test = true
 }]
