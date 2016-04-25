@@ -1,15 +1,19 @@
-import mongoose 	   from 'mongoose'
-import uniqueValidator from 'mongoose-unique-validator'
+// import mongoose 	   from 'mongoose'
+// import uniqueValidator from 'mongoose-unique-validator'
 
-let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
+// let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
+// let Schema = mongoose.Schema
 
-let Schema = mongoose.Schema
+var mongoose = require('mongoose');
 
-const TournamentSchema = new Schema({
+var Schema = mongoose.Schema;
+
+var tournament = new Schema({
 	sport: {
 		type: String,
 		required: true
-	}
+	},
+	Teams: Number,
 	name: {
 		type: String,
 		required: true
@@ -19,15 +23,19 @@ const TournamentSchema = new Schema({
 		required: true,
 		unique: true
 	},
+	match: {
+		type: Schema.Types.ObjectId,
+		ref: 'Match'
+	},
 	owner: {
 		type: Schema.Types.ObjectId,
-		ref: `User`
-	},
-	teams: Number,
-	bracket: Array
+		ref: 'User'
+	}
 }, {timestamp: true, versionKey: false})
 
-TeamSchema.plugin(uniqueValidator)
-TeamSchema.plugin(deepPopulate)
+module.exports = mongoose.model('Tournament', tournament)
 
-export default mongoose.model(`Tournament`, TournamentSchema)
+// TournamentSchema.plugin(uniqueValidator)
+// TournamentSchema.plugin(deepPopulate)
+
+// export default mongoose.model(`Tournament`, TournamentSchema)

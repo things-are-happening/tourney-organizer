@@ -1,11 +1,12 @@
-import mongoose 	   from 'mongoose'
-import uniqueValidator from 'mongoose-unique-validator'
+// import mongoose 	   from 'mongoose'
+// import uniqueValidator from 'mongoose-unique-validator'
 
-let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
+// let deepPopulate = require(`mongoose-deep-populate`)(mongoose)
+var mongoose = require('mongoose')
 
-let Schema = mongoose.Schema
+var Schema = mongoose.Schema
 
-const TeamSchema = new Schema({
+var teamSchema = new Schema({
 	name: {
 		type: String,
 	 	required: true
@@ -26,7 +27,9 @@ const TeamSchema = new Schema({
 	}]
 }, {timestamp: true, versionKey: false})
 
-TeamSchema.plugin(uniqueValidator)
-TeamSchema.plugin(deepPopulate)
+module.exports =  mongoose.model('Team', teamSchema)
 
-export default mongoose.model(`Team`, TeamSchema)
+// TeamSchema.plugin(uniqueValidator)
+// TeamSchema.plugin(deepP opulate)
+
+

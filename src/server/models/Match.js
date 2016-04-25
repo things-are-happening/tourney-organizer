@@ -1,17 +1,18 @@
-import _               from 'lodash'
-import mongoose        from 'mongoose'
-import uniqueValidator from 'mongoose-unique-validator'
+// import _               from 'lodash'
+// import mongoose        from 'mongoose'
+// import uniqueValidator from 'mongoose-unique-validator'
 
-let deepPopulate = require('mongoose-deep-populate')(mongoose)
+// let deepPopulate = require('mongoose-deep-populate')(mongoose)
+var mongoose = require('mongoose')
 
-let Schema = mongoose.Schema
+var Schema = mongoose.Schema
 
-const MatchSchema = new Schema({
+var match = new Schema({
   round: Array,
   teams: [
     {
       type: Schema.Types.ObjectId,
-      ref: `Team`
+      ref: 'Team'
     }
   ],
   score: Array,
@@ -19,7 +20,9 @@ const MatchSchema = new Schema({
   extra: Array
 },{timestamp: true, versionKey: false})
 
-MatchSchema.plugin(uniqueValidator)
-MatchSchema.plugin(deepPopulate)
 
-export default mongoose.model(`Match`, MatchSchema)
+module.exports = mongoose.model(`Match`, match)
+// MatchSchema.plugin(uniqueValidator)
+// MatchSchema.plugin(deepPopulate)
+
+
