@@ -9,6 +9,7 @@ module.exports = [`$scope`, `tournamentService`, `$state`, ($scope, tournamentSe
 		})
 	}
 
+	$document.getelemntbyclass
 
   $scope.test = true
 }]

@@ -1,8 +1,8 @@
-section(class='container')
+section(class='dashboardBodyMain container-fluid')
 	div
 		form(class='newTournamentForm center-text row flex direction-column')
 			h1
-				input(placeholder='Add Tournament Title' class='addTournamentTitle center-text' onblur='this.placeholder="Add Tournament Title"' onfocus='this.placeholder = ""' ng-model='tournamentTitle')
+				input(placeholder='Add Tournament Title' class='addTournamentTitle center-text' onblur='this.placeholder="Add Tournament Title"' onfocus='this.placeholder = ""' ng-model='tournamentTitle' maxlength='30')
 			div(class='form-group flex space-around')
 				div
 					label Start Date
