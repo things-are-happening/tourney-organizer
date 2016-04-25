@@ -14,6 +14,11 @@ gulp.task(`move`, () => {
     .pipe(gulp.dest('./build/client/js'))
 })
 
+gulp.tastk(`assets`, () => {
+  gulp.src(`./src/client/assets/*`)
+    .pipe(gulp.dest(`/build/assets`))
+})
+
 gulp.task(`styles`, () => {
   gulp.src(`./src/client/style.styl`)
     .pipe(stylus())
@@ -80,7 +85,7 @@ gulp.task('watchify', () =>{
     })
 })
 
-gulp.task(`watch`, [`styles`, `jade`, `babel`, `move`], () =>{
+gulp.task(`watch`, [`styles`, `jade`, `babel`, `move`, `assets`], () =>{
   gulp.watch(`./src/**/*.styl`, [`styles`]);
   gulp.watch(`./src/**/*.jade`, [`jade`]);
   gulp.watch([`./src/**/*.js`], [`babel`]);
