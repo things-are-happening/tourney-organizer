@@ -7,7 +7,7 @@ div(class='dashboardBodyMain container-fluid')
 		div(class='col-sm-12 match-cards-body')
 			div
 				a(ui-sref='app.tournament.add')
-					div(class='match col-md-6 col-xs-6 vertical-center flex space-around')		
+					div(class='match col-md-6 col-xs-6 vertical-center flex space-around')
 						i(class='fa fa-plus fa-5x')
 			a(ui-sref='app.tournament.view' ng-repeat='tournament in tournaments | filter:search' class='match-link')
 				div(class='match col-md-6 col-xs-6')
